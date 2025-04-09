@@ -1,0 +1,8 @@
+# Ignorar archivos compilados y caché de Python
+__pycache__/
+env/
+*.csv
+.cache/
+.devcontainer/
+.local/
+**/__pycache__/
