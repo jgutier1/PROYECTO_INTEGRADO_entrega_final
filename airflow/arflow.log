@@ -1,0 +1,958 @@
+2025-04-06 21:24:00 
+2025-04-06 21:24:14 standalone | Starting Airflow Standalone
+2025-04-06 21:24:14 standalone | Checking database is initialized
+2025-04-06 21:25:01 standalone | Database ready
+2025-04-06 21:25:01 FlaskAppBuilder Authentication Manager: Creating admin user
+2025-04-06 21:25:01 FlaskAppBuilder Authentication Manager: Created admin user
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:50.514+0000] {configuration.py:2112} INFO - Creating new FAB webserver config file in: /opt/airflow/webserver_config.py
+2025-04-06 21:25:01 triggerer  | ____________       _____________
+2025-04-06 21:25:01 triggerer  | ____    |__( )_________  __/__  /________      __
+2025-04-06 21:25:01 triggerer  | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+2025-04-06 21:25:01 triggerer  | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+2025-04-06 21:25:01 triggerer  | _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+2025-04-06 21:25:01 triggerer  | [2025-04-07 02:24:51 +0000] [52] [INFO] Starting gunicorn 23.0.0
+2025-04-06 21:25:01 triggerer  | [2025-04-07 02:24:51 +0000] [52] [INFO] Listening at: http://[::]:8794 (52)
+2025-04-06 21:25:01 triggerer  | [2025-04-07 02:24:51 +0000] [52] [INFO] Using worker: sync
+2025-04-06 21:25:01 triggerer  | [2025-04-07 02:24:51 +0000] [53] [INFO] Booting worker with pid: 53
+2025-04-06 21:25:01 triggerer  | [2025-04-07 02:24:51 +0000] [54] [INFO] Booting worker with pid: 54
+2025-04-06 21:25:01 triggerer  | [2025-04-07T02:24:51.587+0000] {triggerer_job_runner.py:181} INFO - Setting up TriggererHandlerWrapper with handler <FileTaskHandler (NOTSET)>
+2025-04-06 21:25:01 triggerer  | [2025-04-07T02:24:51.590+0000] {triggerer_job_runner.py:237} INFO - Setting up logging queue listener with handlers [<RedirectStdHandler <stdout> (NOTSET)>, <TriggererHandlerWrapper (NOTSET)>]
+2025-04-06 21:24:14 INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+2025-04-06 21:24:14 INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+2025-04-06 21:24:14 INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+2025-04-06 21:24:14 WARNI [airflow.models.crypto] empty cryptography key - values will not be stored encrypted.
+2025-04-06 21:24:20 /home/airflow/.local/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+2025-04-06 21:24:20 WARNI [airflow.providers.fab.auth_manager.security_manager.override] No user yet created, use flask fab command to do it.
+2025-04-06 21:25:01 scheduler  | ____________       _____________
+2025-04-06 21:25:01 scheduler  | ____    |__( )_________  __/__  /________      __
+2025-04-06 21:25:01 scheduler  | ____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+2025-04-06 21:25:01 scheduler  | ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+2025-04-06 21:25:01 scheduler  | _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.684+0000] {executor_loader.py:258} INFO - Loaded executor: SequentialExecutor
+2025-04-06 21:25:01 scheduler  | [2025-04-07 02:24:51 +0000] [78] [INFO] Starting gunicorn 23.0.0
+2025-04-06 21:25:01 scheduler  | [2025-04-07 02:24:51 +0000] [78] [INFO] Listening at: http://[::]:8793 (78)
+2025-04-06 21:25:01 scheduler  | [2025-04-07 02:24:51 +0000] [78] [INFO] Using worker: sync
+2025-04-06 21:25:01 scheduler  | [2025-04-07 02:24:51 +0000] [79] [INFO] Booting worker with pid: 79
+2025-04-06 21:25:01 triggerer  | [2025-04-07T02:24:51.733+0000] {triggerer_job_runner.py:338} INFO - Starting the triggerer
+2025-04-06 21:25:01 scheduler  | [2025-04-07 02:24:51 +0000] [81] [INFO] Booting worker with pid: 81
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.876+0000] {scheduler_job_runner.py:950} INFO - Starting the scheduler
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.877+0000] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.881+0000] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 82
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.883+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.887+0000] {settings.py:63} INFO - Configured default timezone UTC
+2025-04-06 21:25:01 scheduler  | [2025-04-07T02:24:51.943+0000] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+2025-04-06 21:25:01 webserver  | /home/airflow/.local/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:55.130+0000] {override.py:1912} INFO - Created Permission View: can create on DAG Runs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:55.223+0000] {override.py:1963} INFO - Added Permission can create on DAG Runs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:55.597+0000] {override.py:1912} INFO - Created Permission View: can read on DAG Runs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:56.046+0000] {override.py:1963} INFO - Added Permission can read on DAG Runs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:56.439+0000] {override.py:1912} INFO - Created Permission View: can edit on DAG Runs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:56.779+0000] {override.py:1963} INFO - Added Permission can edit on DAG Runs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:57.054+0000] {override.py:1912} INFO - Created Permission View: can delete on DAG Runs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:57.456+0000] {override.py:1963} INFO - Added Permission can delete on DAG Runs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:57.746+0000] {override.py:1912} INFO - Created Permission View: menu access on DAG Runs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:58.064+0000] {override.py:1963} INFO - Added Permission menu access on DAG Runs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:58.631+0000] {override.py:1912} INFO - Created Permission View: menu access on Browse
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:58.723+0000] {override.py:1963} INFO - Added Permission menu access on Browse to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:58.931+0000] {override.py:1912} INFO - Created Permission View: can read on Jobs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.023+0000] {override.py:1963} INFO - Added Permission can read on Jobs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.106+0000] {override.py:1912} INFO - Created Permission View: menu access on Jobs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.205+0000] {override.py:1963} INFO - Added Permission menu access on Jobs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.422+0000] {override.py:1912} INFO - Created Permission View: can read on Audit Logs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.514+0000] {override.py:1963} INFO - Added Permission can read on Audit Logs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.606+0000] {override.py:1912} INFO - Created Permission View: menu access on Audit Logs
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:24:59.697+0000] {override.py:1963} INFO - Added Permission menu access on Audit Logs to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.014+0000] {override.py:1912} INFO - Created Permission View: can create on Variables
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.104+0000] {override.py:1963} INFO - Added Permission can create on Variables to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.188+0000] {override.py:1912} INFO - Created Permission View: can read on Variables
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.280+0000] {override.py:1963} INFO - Added Permission can read on Variables to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.363+0000] {override.py:1912} INFO - Created Permission View: can edit on Variables
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.454+0000] {override.py:1963} INFO - Added Permission can edit on Variables to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.538+0000] {override.py:1912} INFO - Created Permission View: can delete on Variables
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.630+0000] {override.py:1963} INFO - Added Permission can delete on Variables to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.722+0000] {override.py:1912} INFO - Created Permission View: menu access on Variables
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.813+0000] {override.py:1963} INFO - Added Permission menu access on Variables to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:00.988+0000] {override.py:1912} INFO - Created Permission View: menu access on Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.080+0000] {override.py:1963} INFO - Added Permission menu access on Admin to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.280+0000] {override.py:1912} INFO - Created Permission View: can create on Task Instances
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.372+0000] {override.py:1963} INFO - Added Permission can create on Task Instances to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.455+0000] {override.py:1912} INFO - Created Permission View: can read on Task Instances
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.538+0000] {override.py:1963} INFO - Added Permission can read on Task Instances to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.613+0000] {override.py:1912} INFO - Created Permission View: can edit on Task Instances
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.697+0000] {override.py:1963} INFO - Added Permission can edit on Task Instances to role Admin
+2025-04-06 21:25:01 webserver  | [2025-04-07T02:25:01.772+0000] {override.py:1912} INFO - Created Permission View: can delete on Task Instances
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:01.855+0000] {override.py:1963} INFO - Added Permission can delete on Task Instances to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:01.947+0000] {override.py:1912} INFO - Created Permission View: menu access on Task Instances
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.038+0000] {override.py:1963} INFO - Added Permission menu access on Task Instances to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.246+0000] {override.py:1912} INFO - Created Permission View: can read on Task Reschedules
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.338+0000] {override.py:1963} INFO - Added Permission can read on Task Reschedules to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.421+0000] {override.py:1912} INFO - Created Permission View: menu access on Task Reschedules
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.513+0000] {override.py:1963} INFO - Added Permission menu access on Task Reschedules to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.854+0000] {override.py:1912} INFO - Created Permission View: can read on Triggers
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:02.946+0000] {override.py:1963} INFO - Added Permission can read on Triggers to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.038+0000] {override.py:1912} INFO - Created Permission View: menu access on Triggers
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.129+0000] {override.py:1963} INFO - Added Permission menu access on Triggers to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.312+0000] {override.py:1912} INFO - Created Permission View: can read on Configurations
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.412+0000] {override.py:1963} INFO - Added Permission can read on Configurations to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.513+0000] {override.py:1912} INFO - Created Permission View: menu access on Configurations
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.604+0000] {override.py:1963} INFO - Added Permission menu access on Configurations to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.821+0000] {override.py:1912} INFO - Created Permission View: can create on Connections
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.913+0000] {override.py:1963} INFO - Added Permission can create on Connections to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:03.996+0000] {override.py:1912} INFO - Created Permission View: can read on Connections
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.088+0000] {override.py:1963} INFO - Added Permission can read on Connections to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.172+0000] {override.py:1912} INFO - Created Permission View: can edit on Connections
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.263+0000] {override.py:1963} INFO - Added Permission can edit on Connections to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.396+0000] {override.py:1912} INFO - Created Permission View: can delete on Connections
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.538+0000] {override.py:1963} INFO - Added Permission can delete on Connections to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.621+0000] {override.py:1912} INFO - Created Permission View: menu access on Connections
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.713+0000] {override.py:1963} INFO - Added Permission menu access on Connections to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.888+0000] {override.py:1912} INFO - Created Permission View: can read on SLA Misses
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:04.971+0000] {override.py:1963} INFO - Added Permission can read on SLA Misses to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.046+0000] {override.py:1912} INFO - Created Permission View: menu access on SLA Misses
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.130+0000] {override.py:1963} INFO - Added Permission menu access on SLA Misses to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.205+0000] {override.py:1912} INFO - Created Permission View: can delete on SLA Misses
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.288+0000] {override.py:1963} INFO - Added Permission can delete on SLA Misses to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.363+0000] {override.py:1912} INFO - Created Permission View: can edit on SLA Misses
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.446+0000] {override.py:1963} INFO - Added Permission can edit on SLA Misses to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.630+0000] {override.py:1912} INFO - Created Permission View: can read on Plugins
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.721+0000] {override.py:1963} INFO - Added Permission can read on Plugins to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.813+0000] {override.py:1912} INFO - Created Permission View: menu access on Plugins
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:05.904+0000] {override.py:1963} INFO - Added Permission menu access on Plugins to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.088+0000] {override.py:1912} INFO - Created Permission View: can read on Providers
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.213+0000] {override.py:1963} INFO - Added Permission can read on Providers to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.305+0000] {override.py:1912} INFO - Created Permission View: menu access on Providers
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.396+0000] {override.py:1963} INFO - Added Permission menu access on Providers to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.605+0000] {override.py:1912} INFO - Created Permission View: can create on Pools
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.697+0000] {override.py:1963} INFO - Added Permission can create on Pools to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.788+0000] {override.py:1912} INFO - Created Permission View: can read on Pools
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.913+0000] {override.py:1963} INFO - Added Permission can read on Pools to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:06.996+0000] {override.py:1912} INFO - Created Permission View: can edit on Pools
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.088+0000] {override.py:1963} INFO - Added Permission can edit on Pools to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.163+0000] {override.py:1912} INFO - Created Permission View: can delete on Pools
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.255+0000] {override.py:1963} INFO - Added Permission can delete on Pools to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.330+0000] {override.py:1912} INFO - Created Permission View: menu access on Pools
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.421+0000] {override.py:1963} INFO - Added Permission menu access on Pools to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.613+0000] {override.py:1912} INFO - Created Permission View: can read on XComs
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.705+0000] {override.py:1963} INFO - Added Permission can read on XComs to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.788+0000] {override.py:1912} INFO - Created Permission View: can delete on XComs
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:07.997+0000] {override.py:1963} INFO - Added Permission can delete on XComs to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:08.088+0000] {override.py:1912} INFO - Created Permission View: menu access on XComs
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:08.196+0000] {override.py:1963} INFO - Added Permission menu access on XComs to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:08.472+0000] {override.py:1912} INFO - Created Permission View: menu access on DAG Dependencies
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:08.571+0000] {override.py:1963} INFO - Added Permission menu access on DAG Dependencies to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.180+0000] {override.py:1912} INFO - Created Permission View: menu access on DAGs
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.263+0000] {override.py:1963} INFO - Added Permission menu access on DAGs to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.430+0000] {override.py:1912} INFO - Created Permission View: menu access on Cluster Activity
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.513+0000] {override.py:1963} INFO - Added Permission menu access on Cluster Activity to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.672+0000] {override.py:1912} INFO - Created Permission View: menu access on Datasets
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.763+0000] {override.py:1963} INFO - Added Permission menu access on Datasets to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:09.930+0000] {override.py:1912} INFO - Created Permission View: menu access on Documentation
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:10.022+0000] {override.py:1963} INFO - Added Permission menu access on Documentation to role Admin
+2025-04-06 21:25:10 webserver  | [2025-04-07T02:25:10.180+0000] {override.py:1912} INFO - Created Permission View: menu access on Docs
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:10.272+0000] {override.py:1963} INFO - Added Permission menu access on Docs to role Admin
+2025-04-06 21:25:18 webserver  | /home/airflow/.local/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:52 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+2025-04-06 21:25:18 webserver  | /home/airflow/.local/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:55 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+2025-04-06 21:25:18 webserver  | /home/airflow/.local/lib/python3.12/site-packages/airflow/api_connexion/schemas/task_schema.py:59 ChangedInMarshmallow4Warning: `Number` field should not be instantiated. Use `Integer`, `Float`, or `Decimal` instead.
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:11.913+0000] {override.py:1912} INFO - Created Permission View: can read on DAGs
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:11.997+0000] {override.py:1912} INFO - Created Permission View: can edit on DAGs
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.080+0000] {override.py:1912} INFO - Created Permission View: can delete on DAGs
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.172+0000] {override.py:1508} INFO - Inserted Role: Public
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.247+0000] {override.py:1508} INFO - Inserted Role: Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.339+0000] {override.py:1963} INFO - Added Permission can read on DAGs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.422+0000] {override.py:1912} INFO - Created Permission View: can read on DAG Dependencies
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.514+0000] {override.py:1963} INFO - Added Permission can read on DAG Dependencies to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.681+0000] {override.py:1912} INFO - Created Permission View: can read on DAG Code
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.764+0000] {override.py:1963} INFO - Added Permission can read on DAG Code to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.847+0000] {override.py:1963} INFO - Added Permission can read on DAG Runs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:12.931+0000] {override.py:1912} INFO - Created Permission View: can read on Datasets
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.014+0000] {override.py:1963} INFO - Added Permission can read on Datasets to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.089+0000] {override.py:1912} INFO - Created Permission View: can read on Cluster Activity
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.181+0000] {override.py:1963} INFO - Added Permission can read on Cluster Activity to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.272+0000] {override.py:1963} INFO - Added Permission can read on Pools to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.431+0000] {override.py:1912} INFO - Created Permission View: can read on ImportError
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.506+0000] {override.py:1963} INFO - Added Permission can read on ImportError to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.680+0000] {override.py:1912} INFO - Created Permission View: can read on DAG Warnings
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.772+0000] {override.py:1963} INFO - Added Permission can read on DAG Warnings to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:13.863+0000] {override.py:1963} INFO - Added Permission can read on Jobs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.006+0000] {override.py:1963} INFO - Added Permission can read on My Password to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.097+0000] {override.py:1963} INFO - Added Permission can edit on My Password to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.289+0000] {override.py:1963} INFO - Added Permission can read on My Profile to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.389+0000] {override.py:1963} INFO - Added Permission can edit on My Profile to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.481+0000] {override.py:1963} INFO - Added Permission can read on SLA Misses to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.572+0000] {override.py:1963} INFO - Added Permission can read on Task Instances to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.747+0000] {override.py:1912} INFO - Created Permission View: can read on Task Logs
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.847+0000] {override.py:1963} INFO - Added Permission can read on Task Logs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:14.939+0000] {override.py:1963} INFO - Added Permission can read on XComs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.122+0000] {override.py:1912} INFO - Created Permission View: can read on Website
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.214+0000] {override.py:1963} INFO - Added Permission can read on Website to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.314+0000] {override.py:1963} INFO - Added Permission menu access on Browse to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.414+0000] {override.py:1963} INFO - Added Permission menu access on DAGs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.514+0000] {override.py:1963} INFO - Added Permission menu access on DAG Dependencies to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.614+0000] {override.py:1963} INFO - Added Permission menu access on DAG Runs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.714+0000] {override.py:1963} INFO - Added Permission menu access on Datasets to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.814+0000] {override.py:1963} INFO - Added Permission menu access on Cluster Activity to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:15.906+0000] {override.py:1963} INFO - Added Permission menu access on Documentation to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.006+0000] {override.py:1963} INFO - Added Permission menu access on Docs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.106+0000] {override.py:1963} INFO - Added Permission menu access on Jobs to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.197+0000] {override.py:1963} INFO - Added Permission menu access on SLA Misses to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.298+0000] {override.py:1963} INFO - Added Permission menu access on Task Instances to role Viewer
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.389+0000] {override.py:1508} INFO - Inserted Role: User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.481+0000] {override.py:1963} INFO - Added Permission can read on DAGs to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.581+0000] {override.py:1963} INFO - Added Permission can read on DAG Dependencies to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.665+0000] {override.py:1963} INFO - Added Permission can read on DAG Code to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.746+0000] {override.py:1963} INFO - Added Permission can read on DAG Runs to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.830+0000] {override.py:1963} INFO - Added Permission can read on Datasets to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:16.922+0000] {override.py:1963} INFO - Added Permission can read on Cluster Activity to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.005+0000] {override.py:1963} INFO - Added Permission can read on Pools to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.089+0000] {override.py:1963} INFO - Added Permission can read on ImportError to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.163+0000] {override.py:1963} INFO - Added Permission can read on DAG Warnings to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.272+0000] {override.py:1963} INFO - Added Permission can read on Jobs to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.347+0000] {override.py:1963} INFO - Added Permission can read on My Password to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.430+0000] {override.py:1963} INFO - Added Permission can edit on My Password to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.514+0000] {override.py:1963} INFO - Added Permission can read on My Profile to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.597+0000] {override.py:1963} INFO - Added Permission can edit on My Profile to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.756+0000] {override.py:1963} INFO - Added Permission can read on SLA Misses to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.830+0000] {override.py:1963} INFO - Added Permission can read on Task Instances to role User
+2025-04-06 21:25:18 webserver  | [2025-04-07T02:25:17.914+0000] {override.py:1963} INFO - Added Permission can read on Task Logs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:17.989+0000] {override.py:1963} INFO - Added Permission can read on XComs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.072+0000] {override.py:1963} INFO - Added Permission can read on Website to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.148+0000] {override.py:1963} INFO - Added Permission menu access on Browse to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.231+0000] {override.py:1963} INFO - Added Permission menu access on DAGs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.314+0000] {override.py:1963} INFO - Added Permission menu access on DAG Dependencies to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.406+0000] {override.py:1963} INFO - Added Permission menu access on DAG Runs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.497+0000] {override.py:1963} INFO - Added Permission menu access on Datasets to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.580+0000] {override.py:1963} INFO - Added Permission menu access on Cluster Activity to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.672+0000] {override.py:1963} INFO - Added Permission menu access on Documentation to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.772+0000] {override.py:1963} INFO - Added Permission menu access on Docs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.864+0000] {override.py:1963} INFO - Added Permission menu access on Jobs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:18.956+0000] {override.py:1963} INFO - Added Permission menu access on SLA Misses to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.056+0000] {override.py:1963} INFO - Added Permission menu access on Task Instances to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.156+0000] {override.py:1963} INFO - Added Permission can edit on DAGs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.248+0000] {override.py:1963} INFO - Added Permission can delete on DAGs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.339+0000] {override.py:1963} INFO - Added Permission can create on Task Instances to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.431+0000] {override.py:1963} INFO - Added Permission can edit on Task Instances to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.523+0000] {override.py:1963} INFO - Added Permission can delete on Task Instances to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.614+0000] {override.py:1963} INFO - Added Permission can create on DAG Runs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.706+0000] {override.py:1963} INFO - Added Permission can edit on DAG Runs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.797+0000] {override.py:1963} INFO - Added Permission can delete on DAG Runs to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.881+0000] {override.py:1912} INFO - Created Permission View: can create on Datasets
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:19.973+0000] {override.py:1963} INFO - Added Permission can create on Datasets to role User
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.072+0000] {override.py:1508} INFO - Inserted Role: Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.163+0000] {override.py:1963} INFO - Added Permission can read on DAGs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.256+0000] {override.py:1963} INFO - Added Permission can read on DAG Dependencies to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.347+0000] {override.py:1963} INFO - Added Permission can read on DAG Code to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.431+0000] {override.py:1963} INFO - Added Permission can read on DAG Runs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.514+0000] {override.py:1963} INFO - Added Permission can read on Datasets to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.589+0000] {override.py:1963} INFO - Added Permission can read on Cluster Activity to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.663+0000] {override.py:1963} INFO - Added Permission can read on Pools to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.738+0000] {override.py:1963} INFO - Added Permission can read on ImportError to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.830+0000] {override.py:1963} INFO - Added Permission can read on DAG Warnings to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:20.922+0000] {override.py:1963} INFO - Added Permission can read on Jobs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.031+0000] {override.py:1963} INFO - Added Permission can read on My Password to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.122+0000] {override.py:1963} INFO - Added Permission can edit on My Password to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.247+0000] {override.py:1963} INFO - Added Permission can read on My Profile to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.339+0000] {override.py:1963} INFO - Added Permission can edit on My Profile to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.431+0000] {override.py:1963} INFO - Added Permission can read on SLA Misses to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.522+0000] {override.py:1963} INFO - Added Permission can read on Task Instances to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.614+0000] {override.py:1963} INFO - Added Permission can read on Task Logs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.705+0000] {override.py:1963} INFO - Added Permission can read on XComs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.797+0000] {override.py:1963} INFO - Added Permission can read on Website to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:21.922+0000] {override.py:1963} INFO - Added Permission menu access on Browse to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.014+0000] {override.py:1963} INFO - Added Permission menu access on DAGs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.106+0000] {override.py:1963} INFO - Added Permission menu access on DAG Dependencies to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.197+0000] {override.py:1963} INFO - Added Permission menu access on DAG Runs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.289+0000] {override.py:1963} INFO - Added Permission menu access on Datasets to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.381+0000] {override.py:1963} INFO - Added Permission menu access on Cluster Activity to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.464+0000] {override.py:1963} INFO - Added Permission menu access on Documentation to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.548+0000] {override.py:1963} INFO - Added Permission menu access on Docs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.639+0000] {override.py:1963} INFO - Added Permission menu access on Jobs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.731+0000] {override.py:1963} INFO - Added Permission menu access on SLA Misses to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.823+0000] {override.py:1963} INFO - Added Permission menu access on Task Instances to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:22.914+0000] {override.py:1963} INFO - Added Permission can edit on DAGs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.006+0000] {override.py:1963} INFO - Added Permission can delete on DAGs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.122+0000] {override.py:1963} INFO - Added Permission can create on Task Instances to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.206+0000] {override.py:1963} INFO - Added Permission can edit on Task Instances to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.289+0000] {override.py:1963} INFO - Added Permission can delete on Task Instances to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.372+0000] {override.py:1963} INFO - Added Permission can create on DAG Runs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.456+0000] {override.py:1963} INFO - Added Permission can edit on DAG Runs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.547+0000] {override.py:1963} INFO - Added Permission can delete on DAG Runs to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.639+0000] {override.py:1963} INFO - Added Permission can create on Datasets to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.722+0000] {override.py:1963} INFO - Added Permission can read on Configurations to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.797+0000] {override.py:1963} INFO - Added Permission menu access on Admin to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.872+0000] {override.py:1963} INFO - Added Permission menu access on Configurations to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:23.947+0000] {override.py:1963} INFO - Added Permission menu access on Connections to role Op
+2025-04-06 21:25:24 webserver  | [2025-04-07T02:25:24.014+0000] {override.py:1963} INFO - Added Permission menu access on Pools to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.080+0000] {override.py:1963} INFO - Added Permission menu access on Plugins to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.189+0000] {override.py:1963} INFO - Added Permission menu access on Variables to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.256+0000] {override.py:1963} INFO - Added Permission menu access on Providers to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.331+0000] {override.py:1963} INFO - Added Permission menu access on XComs to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.423+0000] {override.py:1963} INFO - Added Permission can create on Connections to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.514+0000] {override.py:1963} INFO - Added Permission can read on Connections to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.606+0000] {override.py:1963} INFO - Added Permission can edit on Connections to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.698+0000] {override.py:1963} INFO - Added Permission can delete on Connections to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.781+0000] {override.py:1963} INFO - Added Permission can create on Pools to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.864+0000] {override.py:1963} INFO - Added Permission can edit on Pools to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:24.947+0000] {override.py:1963} INFO - Added Permission can delete on Pools to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.039+0000] {override.py:1963} INFO - Added Permission can read on Plugins to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.123+0000] {override.py:1963} INFO - Added Permission can read on Providers to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.206+0000] {override.py:1963} INFO - Added Permission can create on Variables to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.290+0000] {override.py:1963} INFO - Added Permission can read on Variables to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.373+0000] {override.py:1963} INFO - Added Permission can edit on Variables to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.514+0000] {override.py:1963} INFO - Added Permission can delete on Variables to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.614+0000] {override.py:1963} INFO - Added Permission can delete on XComs to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.698+0000] {override.py:1912} INFO - Created Permission View: can delete on Datasets
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.798+0000] {override.py:1963} INFO - Added Permission can delete on Datasets to role Op
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:25.897+0000] {override.py:1963} INFO - Added Permission can read on DAGs to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:26.181+0000] {override.py:1963} INFO - Added Permission can read on DAG Dependencies to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:26.739+0000] {override.py:1963} INFO - Added Permission can read on DAG Code to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.281+0000] {override.py:1963} INFO - Added Permission can read on Datasets to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.372+0000] {override.py:1963} INFO - Added Permission can read on Cluster Activity to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.506+0000] {override.py:1963} INFO - Added Permission can read on ImportError to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.648+0000] {override.py:1963} INFO - Added Permission can read on DAG Warnings to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.789+0000] {override.py:1963} INFO - Added Permission can read on Task Logs to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.881+0000] {override.py:1963} INFO - Added Permission can read on Website to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:27.973+0000] {override.py:1963} INFO - Added Permission can edit on DAGs to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:28.106+0000] {override.py:1963} INFO - Added Permission can delete on DAGs to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:28.198+0000] {override.py:1963} INFO - Added Permission can create on Datasets to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:28.290+0000] {override.py:1963} INFO - Added Permission can delete on Datasets to role Admin
+2025-04-06 21:25:41 webserver  | [2025-04-07 02:25:28 +0000] [51] [INFO] Starting gunicorn 23.0.0
+2025-04-06 21:25:41 webserver  | [2025-04-07T02:25:39.009+0000] {providers_manager.py:287} INFO - Optional provider feature disabled when importing 'airflow.providers.google.leveldb.hooks.leveldb.LevelDBHook' from 'apache-airflow-providers-google' package
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/batch/models/_models_py3.py:4839 SyntaxWarning: invalid escape sequence '\s'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:175 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:222 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1151 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1248 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1271 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1406 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1439 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1495 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1683 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:1750 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:2025 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:2110 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:2407 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:2468 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:3987 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:4096 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:4127 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:4186 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:4225 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:4275 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:5209 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:5265 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:5302 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:5358 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:6437 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:6497 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:6538 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:6588 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7023 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7096 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7267 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7333 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7378 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:7440 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:8222 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:8282 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:8322 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:8368 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:9475 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:9531 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10532 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10588 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10625 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10680 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10923 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:10979 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11016 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11072 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11231 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11282 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11420 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:11477 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:12300 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:12383 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:12439 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:12524 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13019 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13090 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13139 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13200 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13886 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13941 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:13977 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14026 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14318 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14388 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14436 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14492 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14744 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:14810 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15415 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15482 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15527 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15578 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15897 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:15953 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16617 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16674 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16712 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16780 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16932 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:16988 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:17025 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:17090 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:17228 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:17284 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:20234 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:20289 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:20862 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:20921 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:20960 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21014 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21316 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21377 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21418 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21478 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21612 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:21668 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22155 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22218 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22559 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22626 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22671 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:22722 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23061 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23128 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23173 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23224 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23511 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23567 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:23968 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:24018 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:25343 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:25398 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:25434 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:25485 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:26723 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:26779 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:27121 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:27177 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:27461 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:27517 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28053 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28109 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28536 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28592 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28932 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:28982 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:30727 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:30783 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:31296 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:31344 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:31617 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:31673 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32120 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32176 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32339 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32395 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32432 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:32487 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:33502 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:33558 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:33869 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:33928 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:33967 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:34021 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:34739 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:34806 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:34852 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:34908 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:36915 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:36971 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:37417 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:37473 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:37845 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:37901 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38208 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38264 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38301 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38351 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38690 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:38758 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39141 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39192 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39419 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39487 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39683 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:39738 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:40019 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:40084 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41138 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41196 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41359 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41415 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41452 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41507 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41875 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:41947 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42441 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42497 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42534 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42590 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42627 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:42692 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43020 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43079 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43118 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43168 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43514 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43573 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43612 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43666 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:43989 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:44045 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:44386 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:44442 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:45003 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:45058 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:45444 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:45499 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:46042 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:46098 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:46702 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:46758 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:47000 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:47050 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:47648 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:47704 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:48113 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:48190 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:48244 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:48321 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:49499 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:49555 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:49932 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50002 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50052 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50107 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50379 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50449 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50499 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50554 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50590 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50660 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50710 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:50770 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51046 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51116 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51166 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51226 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51485 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51540 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51787 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51851 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51895 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:51958 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:52212 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:52275 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:52463 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:52532 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:53040 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:53111 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:53334 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:53407 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:53961 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:54059 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:54322 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:54398 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:55022 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:55078 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:55310 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:55365 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:56196 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:56248 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:56508 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:56564 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57087 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57147 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57187 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57237 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57560 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57620 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57660 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:57710 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59106 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59162 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59316 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59396 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59452 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59535 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59594 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59677 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59733 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:59818 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:60639 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:60722 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:60778 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:60863 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61167 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61250 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61306 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61387 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61696 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:25:41 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61752 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61954 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:61992 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:62660 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:62715 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:63882 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:63946 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:64582 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:64674 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:64940 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65014 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65117 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65199 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65385 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65441 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65874 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:65950 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66003 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66087 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66686 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66779 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66918 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:66964 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:67735 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:67791 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:68043 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:68097 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:68532 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | /home/airflow/.local/lib/python3.12/site-packages/azure/synapse/artifacts/models/_models_py3.py:68588 SyntaxWarning: invalid escape sequence '\d'
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:43 +0000] [51] [INFO] Listening at: http://0.0.0.0:8080 (51)
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:43 +0000] [51] [INFO] Using worker: sync
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:43 +0000] [105] [INFO] Booting worker with pid: 105
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:43 +0000] [106] [INFO] Booting worker with pid: 106
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:43 +0000] [107] [INFO] Booting worker with pid: 107
+2025-04-06 21:49:52 webserver  | [2025-04-07 02:25:44 +0000] [108] [INFO] Booting worker with pid: 108
+2025-04-06 21:49:52 standalone | Airflow is ready
+2025-04-06 21:49:52 standalone | Login with username: admin  password: xHPxM8xSSp5AaWyH
+2025-04-06 21:49:52 standalone | Airflow Standalone is for development purposes only. Do not use this in production!
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:25:51.792+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:26:51.859+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:27:51.931+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:28:52.009+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 scheduler  | [2025-04-07T02:29:51.931+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:29:52.074+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:30:52.140+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:31:52.210+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:32:52.282+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:33:52.350+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 scheduler  | [2025-04-07T02:34:51.961+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:34:52.419+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:35:52.487+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:36:52.560+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:37:52.637+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:38:52.705+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 scheduler  | [2025-04-07T02:39:52.050+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:39:52.777+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:40:52.839+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:41:52.903+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:42:52.969+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:43:53.029+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 scheduler  | [2025-04-07T02:44:52.072+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:44:53.094+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:45:53.146+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:46:53.209+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:47:53.273+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-06 21:49:52 triggerer  | [2025-04-07T02:48:53.341+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T02:49:52.085+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:49:53.404+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:50:53.473+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:51:53.524+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:52:53.590+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:53:53.654+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T02:54:52.106+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:54:53.724+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:55:53.790+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:56:53.858+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:57:53.926+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:58:53.992+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T02:59:52.132+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T02:59:54.059+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:00:54.125+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:01:54.186+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:02:54.245+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:03:54.301+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:04:52.158+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:04:54.364+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:05:54.417+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:06:54.470+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:07:54.543+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:08:54.607+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:09:52.187+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:09:54.668+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:10:54.721+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:11:54.781+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:12:54.839+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:13:54.896+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:14:52.225+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:14:54.958+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:15:55.030+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:16:55.086+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:17:55.149+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:18:55.219+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:19:52.249+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:19:55.293+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:20:55.356+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:21:55.418+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:22:55.480+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:23:55.547+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:24:52.278+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:24:55.615+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:25:55.679+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:26:55.744+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:27:55.815+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:28:55.881+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:29:52.302+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:29:55.948+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:30:56.013+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:31:56.072+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:32:56.144+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:33:56.214+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-07T03:34:52.331+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:34:56.282+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:35:56.349+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:36:56.413+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-07T03:37:26.544+0000] {triggerer_job_runner.py:605} INFO - Triggerer's async thread was blocked for 11.23 seconds, likely by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines.
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:27:59.980+0000] {job.py:229} INFO - Heartbeat recovered after 75045.85 seconds
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:28:00.504+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-08T00:28:01.314+0000] {job.py:229} INFO - Heartbeat recovered after 75052.21 seconds
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:29:00.563+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:30:00.628+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-08T00:30:25.315+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:31:00.685+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:32:00.740+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:33:00.781+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:34:00.848+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 triggerer  | [2025-04-08T00:35:00.913+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 19:36:01 scheduler  | [2025-04-08T00:35:25.338+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:36:00.987+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:37:01.058+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:38:01.127+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:39:01.192+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:40:01.259+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T00:40:25.363+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:41:01.332+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:42:01.401+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:43:01.469+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:44:01.532+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:45:01.593+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T00:45:25.461+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:46:01.658+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:47:01.728+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:48:01.797+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:49:01.865+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:50:01.940+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T00:50:25.479+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:51:02.014+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:52:02.087+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:53:02.157+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:54:02.220+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:55:03.153+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 webserver  | [2025-04-08 00:55:22 +0000] [51] [INFO] Handling signal: ttin
+2025-04-07 20:33:05 webserver  | [2025-04-08 00:55:22 +0000] [304] [INFO] Booting worker with pid: 304
+2025-04-07 20:33:05 webserver  | [2025-04-08 00:55:23 +0000] [51] [INFO] Handling signal: ttou
+2025-04-07 20:33:05 webserver  | [2025-04-08 00:55:23 +0000] [105] [INFO] Worker exiting (pid: 105)
+2025-04-07 20:33:05 scheduler  | [2025-04-08T00:55:24.362+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 webserver  | [2025-04-08 00:55:24 +0000] [51] [ERROR] Worker (pid:105) was sent SIGTERM!
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:56:03.220+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:57:03.295+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:58:03.368+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T00:59:03.434+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:00:03.508+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:00:24.385+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:01:03.576+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:02:03.647+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:03:03.719+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:04:03.791+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:05:03.861+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:05:24.408+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:06:03.925+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:07:03.976+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:08:04.043+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:09:04.102+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:10:04.164+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:10:24.413+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:11:04.226+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:12:04.295+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:13:04.364+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:14:04.429+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:15:04.496+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:15:24.437+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:16:04.550+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:17:04.621+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:18:04.687+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:19:04.753+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:20:04.824+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:20:24.460+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:21:04.894+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:22:04.971+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:23:05.036+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:24:05.098+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:25:05.162+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:25:24.481+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:26:05.225+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:27:05.290+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:28:05.359+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:29:05.417+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:30:05.490+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 scheduler  | [2025-04-08T01:30:24.504+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:31:05.556+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 20:33:05 triggerer  | [2025-04-08T01:32:05.627+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:33:05.702+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:34:05.773+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:35:05.837+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T01:35:24.525+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:36:05.906+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:37:05.975+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:38:06.051+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:39:06.118+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:40:06.186+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T01:40:24.547+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:41:06.245+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:42:06.310+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:43:06.385+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:44:06.446+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:45:06.514+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T01:45:24.569+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:46:06.584+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:47:06.653+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:48:06.723+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:49:06.784+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:50:06.854+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T01:50:24.590+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:51:06.927+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:52:06.993+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:53:07.061+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:54:07.127+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:55:07.198+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T01:55:24.613+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:56:07.273+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:57:07.343+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:58:07.412+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T01:59:07.477+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:00:07.544+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:00:24.632+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:01:07.605+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:02:07.681+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:03:07.747+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:04:07.813+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:05:07.881+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:05:24.652+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:06:07.945+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:07:08.013+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:08:08.080+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:09:08.147+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:10:08.214+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:10:24.674+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:11:08.275+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:12:08.345+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:13:08.410+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:14:08.477+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:15:08.549+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:15:24.697+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:16:08.624+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:17:08.696+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:18:08.761+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:19:08.829+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:20:08.902+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:20:24.718+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:21:08.954+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:22:09.016+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:23:09.083+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:24:09.145+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:25:09.205+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:25:24.741+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:26:09.262+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:27:09.329+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:28:09.387+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:29:09.450+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:30:09.512+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 scheduler  | [2025-04-08T02:30:24.777+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:31:09.568+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 21:33:09 triggerer  | [2025-04-08T02:32:09.633+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:33:09.701+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:34:09.763+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:35:09.818+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 webserver  | [2025-04-08 02:35:22 +0000] [51] [INFO] Handling signal: ttin
+2025-04-07 22:30:13 webserver  | [2025-04-08 02:35:22 +0000] [502] [INFO] Booting worker with pid: 502
+2025-04-07 22:30:13 webserver  | [2025-04-08 02:35:23 +0000] [51] [INFO] Handling signal: ttou
+2025-04-07 22:30:13 webserver  | [2025-04-08 02:35:23 +0000] [106] [INFO] Worker exiting (pid: 106)
+2025-04-07 22:30:13 scheduler  | [2025-04-08T02:35:24.796+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 webserver  | [2025-04-08 02:35:24 +0000] [51] [ERROR] Worker (pid:106) was sent SIGTERM!
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:36:09.885+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:37:09.950+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:38:10.015+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:39:10.077+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:40:10.142+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T02:40:24.816+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:41:10.203+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:42:10.278+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:43:10.340+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:44:10.407+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:45:10.474+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T02:45:25.059+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:46:10.541+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:47:10.610+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:48:10.677+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:49:10.743+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:50:10.808+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T02:50:25.082+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:51:10.874+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:52:10.939+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:53:11.008+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:54:11.071+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:55:11.133+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T02:55:25.098+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:56:11.199+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:57:11.268+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:58:11.337+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T02:59:11.399+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:00:11.464+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:00:25.120+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:01:11.525+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:02:11.591+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:03:11.659+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:04:11.727+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:05:11.787+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:05:25.141+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:06:11.851+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:07:11.922+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:08:11.994+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:09:12.062+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:10:12.132+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:10:25.159+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:11:12.188+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:12:12.251+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:13:12.324+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:14:12.388+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:15:12.459+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:15:25.177+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:16:12.526+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:17:12.587+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:18:12.655+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:19:12.719+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:20:12.785+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:20:25.199+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:21:12.855+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:22:12.915+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:23:12.981+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:24:13.049+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:25:13.116+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 scheduler  | [2025-04-08T03:25:25.221+0000] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:26:13.182+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:27:13.245+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:28:13.315+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
+2025-04-07 22:30:13 triggerer  | [2025-04-08T03:29:13.374+0000] {triggerer_job_runner.py:510} INFO - 0 triggers currently running
